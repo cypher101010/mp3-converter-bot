@@ -96,6 +96,10 @@ async def on_message(message):
         embedVar = discord.Embed(title="List of commands with examples: \n\n- !mp3 [youtube video link]\n - !help \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
         await message.channel.send(embed=embedVar)
 
+    if message.content.startswith('!bufi'):
+        embedVar = discord.Embed(title="Bufi gej", color=0x0066ff)
+        await message.channel.send(embed=embedVar)
+
 
 
 
