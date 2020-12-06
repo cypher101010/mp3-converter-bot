@@ -1,0 +1,2 @@
+discord
+youtube_dl
