@@ -10,7 +10,7 @@ Commands:
     - !mp3 [youtube video link]
     - !help
 
-*Note: Don't send links to videos longer than 7 minutes because of Discord file size limit 
+*Note: Don't send links to videos longer than 7 minutes because of Discord file size limit* 
 
 
 
