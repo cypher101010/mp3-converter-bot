@@ -38,9 +38,10 @@ async def on_message(message):
             # check if there are more than one links being sent
             if (len(url) == 1):
 
-                validated_string = 'www.youtube.com/watch?v='
+                validated_yt_url_1 = 'https://www.youtube.com/watch?v='
+                validated_yt_url_2 = 'https://youtu.be/UyeIACnd8uo'
 
-                if(validated_string in url[0]):
+                if(validated_yt_url_1 in url[0] or validated_yt_url_2 in url[0]):
 
 
                     print('Youtube link is valid...')
@@ -96,9 +97,7 @@ async def on_message(message):
         embedVar = discord.Embed(title="List of commands with examples: \n\n- !mp3 [youtube video link]\n - !help \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
         await message.channel.send(embed=embedVar)
 
-    if message.content.startswith('!bufi'):
-        embedVar = discord.Embed(title="Bufi gej", color=0x0066ff)
-        await message.channel.send(embed=embedVar)
+
 
 
 
