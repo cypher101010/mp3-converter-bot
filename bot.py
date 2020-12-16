@@ -1,3 +1,5 @@
+# TODO: implement title song seacrh by using the youtubesearch library 
+
 import discord, youtube_dl, re, os, glob, mp3
 from os.path import getsize
 
@@ -39,7 +41,7 @@ async def on_message(message):
             if (len(url) == 1):
 
                 validated_yt_url_1 = 'https://www.youtube.com/watch?v='
-                validated_yt_url_2 = 'https://youtu.be/UyeIACnd8uo'
+                validated_yt_url_2 = 'https://youtu.be/'
 
                 if(validated_yt_url_1 in url[0] or validated_yt_url_2 in url[0]):
 
@@ -97,6 +99,12 @@ async def on_message(message):
         embedVar = discord.Embed(title="List of commands with examples: \n\n- !mp3 [youtube video link]\n - !help \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
         await message.channel.send(embed=embedVar)
 
+    
+    #info command
+    if message.content.startswith('!info'):
+        embedVar = discord.Embed(title="Bot information: \n\nGithub: [not public yet]\n\n", color=0x0066ff)
+        await message.channel.send(embed=embedVar)
+
 
 
 
@@ -104,6 +112,5 @@ async def on_message(message):
 
 
 client.run(os.environ['DISCORD_TOKEN'])
-
 
 
