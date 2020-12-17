@@ -1,17 +1,11 @@
-#MP3 Converter Discord Bot
+# MP3 CONVERTER BOT
 
-File structure:
-    - bot.py - main file with all of the logic
-    - mp3.py - function for downloading the audio file with youtube_dl library
-    - Procfile - Heroku deployement file
-    - requirement.txt - all the libraries needed for running this project
+__MP3 Converter is a discord bot for convreting youtube video links in .mp3 files wich it then sent to users.__
 
-Commands:
-    - !mp3 [youtube video link]
-    - !help
+## Example command:
+ * !mp3 [example youtube video link] (https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+ 
 
-*Note: Don't send links to videos longer than 7 minutes because of Discord file size limit* 
-
-
-
-
+!Note: Unless you're discord server is boosted then you wont be able to convert videos longer that 7 minutes.
+ 
+ 
