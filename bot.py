@@ -22,7 +22,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startwith('!'):
+    if message.content.startswith('!'):
         embedVar = discord.Embed(title="Sorry, we changed our call sign from ! to - .\\You also don't need to write -mp3 [youtube link] just - [youtube link]\\For example:\\ - https://www.youtube.com/watch?v=dQw4w9WgXcQ", color=0x0066ff)
 
         await message.channel.send(embed=embedVar)
