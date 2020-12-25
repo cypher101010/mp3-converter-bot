@@ -23,13 +23,13 @@ async def on_message(message):
         return
 
     if message.content.startswith('!'):
-        embedVar = discord.Embed(title="Sorry, we changed our call sign from ! to - .\\You also don't need to write -mp3 [youtube link] just - [youtube link]\\For example:\\ - https://www.youtube.com/watch?v=dQw4w9WgXcQ", color=0x0066ff)
+        embedVar = discord.Embed(title="Sorry, we changed our call sign from !mp3 to -a .\n\nYou also don't need to write -mp3 [youtube link] just -a [youtube link]\n\nFor example:\n\n -a [youtube video link]", color=0x0066ff)
 
         await message.channel.send(embed=embedVar)
 
 
     # main command
-    if message.content.startswith('-'):
+    if message.content.startswith('-a'):
 
         #get the message content
         msg = message.content        
@@ -89,11 +89,11 @@ async def on_message(message):
 
             else: 
 
-                embedVar = discord.Embed(title="Something went wrong :confused: \n\nIt looks like you sent more than one url's, please send one url at time.\\Check out -help and -info commands.", color=0x0066ff)
+                embedVar = discord.Embed(title="Something went wrong :confused: \n\nIt looks like you sent more than one url's, please send one url at time.\n\nCheck out -help and -info commands.", color=0x0066ff)
                 await message.channel.send(embed=embedVar)
         else:
 
-            embedVar = discord.Embed(title="It seems like didn't send a proper youtube video link.\\Check out -help and -info commands. \\Note: We are working on adding search by title support and we hope to implement it soon, Zae.", color=0x0066ff)
+            embedVar = discord.Embed(title="It seems like didn't send a proper youtube video link.\n\nCheck out -help and -info commands. \n\nNote: We are working on adding search by title support and we hope to implement it soon, Zae.", color=0x0066ff)
             await message.channel.send(embed=embedVar)
 
 
@@ -101,7 +101,7 @@ async def on_message(message):
 
     # help command
     if message.content.startswith('-help'):
-        embedVar = discord.Embed(title="List of commands with examples: \n\n - [youtube video link]\n -help\n\n -info \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
+        embedVar = discord.Embed(title="List of commands with examples: \n -a [youtube video link]\n -help\n -info \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
         await message.channel.send(embed=embedVar)
 
     
