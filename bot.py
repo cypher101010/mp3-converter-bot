@@ -22,9 +22,14 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    if message.content.startwith('!'):
+        embedVar = discord.Embed(title="Sorry, we changed our call sign from ! to - .\\You also don't need to write -mp3 [youtube link] just - [youtube link]\\For example:\\ - https://www.youtube.com/watch?v=dQw4w9WgXcQ", color=0x0066ff)
+
+        await message.channel.send(embed=embedVar)
+
 
     # main command
-    if message.content.startswith('!mp3'):
+    if message.content.startswith('-'):
 
         #get the message content
         msg = message.content        
@@ -64,7 +69,7 @@ async def on_message(message):
                         if file_size > 8000000:
                             print('The file size is over 8MB...\n')
 
-                            embedVar = discord.Embed(title="Something went wrong :confused:\n\nTry sending a song that is under 7 minutes long, \nbecause of Discord's file size limit.", color=0x0066ff)
+                            embedVar = discord.Embed(title="Something went wrong :confused:\n\nTry sending a song that is under 7 minutes long, \nbecause of Discord's file size limit.\\Check out -help and -info commands.", color=0x0066ff)
                             await message.channel.send(embed=embedVar)
 
                             os.remove(files)
@@ -77,32 +82,32 @@ async def on_message(message):
                             print('File was deleted...\n')  
                 else:
 
-                    embedVar = discord.Embed(title="Something went wrong :confused:\n\nIt seems like you didn't send a valid Youtube video link.", color=0x0066ff)
+                   
                     await message.channel.send(embed=embedVar)
 
                     print('The link was not valid')
 
             else: 
 
-                embedVar = discord.Embed(title="Something went wrong :confused: \n\nIt looks like you sent more than one url's, please send one url at time.", color=0x0066ff)
+                embedVar = discord.Embed(title="Something went wrong :confused: \n\nIt looks like you sent more than one url's, please send one url at time.\\Check out -help and -info commands.", color=0x0066ff)
                 await message.channel.send(embed=embedVar)
         else:
 
-            embedVar = discord.Embed(title="List of commands with examples: \n\n- !mp3 [youtube video link]\n - !help \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
+            embedVar = discord.Embed(title="It seems like didn't send a proper youtube video link.\\Check out -help and -info commands. \\Note: We are working on adding search by title support and we hope to implement it soon, Zae.", color=0x0066ff)
             await message.channel.send(embed=embedVar)
 
 
 
 
     # help command
-    if message.content.startswith('!help'):
-        embedVar = discord.Embed(title="List of commands with examples: \n\n- !mp3 [youtube video link]\n - !help \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
+    if message.content.startswith('-help'):
+        embedVar = discord.Embed(title="List of commands with examples: \n\n - [youtube video link]\n -help\n\n -info \n\n ** Important: The video length must be under 7 minutes long. **", color=0x0066ff)
         await message.channel.send(embed=embedVar)
 
     
     #info command
-    if message.content.startswith('!info'):
-        embedVar = discord.Embed(title="Bot information: \n\nGithub: [not public yet]\n\n", color=0x0066ff)
+    if message.content.startswith('-info'):
+        embedVar = discord.Embed(title="Bot information: \n\nGithub: [not public yet]\n\nCreated by Zae", color=0x0066ff)
         await message.channel.send(embed=embedVar)
 
 
