@@ -1,7 +1,6 @@
 # MP3 CONVERTER BOT
 
-![MP3 converter](https://i.postimg.cc/Qd8HS0Qq/iconfinder-file-type-document-format-computer-mp3-music-3280449.png)
-
+[![iconfinder-file-type-document-format-computer-mp3-music-3280449.png](https://i.postimg.cc/Qd8HS0Qq/iconfinder-file-type-document-format-computer-mp3-music-3280449.png)](https://postimg.cc/Cz2hxC6Z)
 __MP3 Converter is a discord bot for convreting youtube video links in .mp3 files wich it then sent to users.__
 
 ## Example command:
