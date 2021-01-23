@@ -95,7 +95,8 @@ async def on_message(message):
         elif not url:
             #split the message after the fisrt 'empty space'
             msg = msg.split(" ",1)
-            print(msg)
+            print(msg[1])
+            msg = msg.replace(" ","+")
 
             # create a youtube serach link with our string
             html = urllib.request.urlopen(f"https://www.youtube.com/results?search_query={msg[1]}")
