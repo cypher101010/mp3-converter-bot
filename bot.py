@@ -94,16 +94,17 @@ async def on_message(message):
                 await message.channel.send(embed=embedVar)
         elif not url:
             #split the message after the fisrt 'empty space'
-            msg = msg.split(" ",1)
+            msg = msg.split(' ',1)
             print(msg[1])
-            msg = msg[1].replace(" ","+")
+            msg = msg[1].replace(' ','+')
 
             # create a youtube serach link with our string
-            html = urllib.request.urlopen(f"https://www.youtube.com/results?search_query={msg[1]}")
-            video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
+            html = urllib.request.urlopen(f'https://www.youtube.com/results?search_query={msg[1]}')
+            print(html.read().decode())
+            video_ids = re.findall(r'watch\?v=(\S{11})', html.read().decode())
 
             # construct a new url from the videos id's we got back
-            new_url = "https://www.youtube.com/watch?v=" + video_ids[0]
+            new_url = 'https://www.youtube.com/watch?v=' + video_ids[0]
             print(new_url)
 
             mp3.song(new_url)
