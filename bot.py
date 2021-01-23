@@ -101,9 +101,9 @@ async def on_message(message):
             video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
 
             # construct a new url from the videos id's we got back
-            url = "https://www.youtube.com/watch?v=" + video_ids[0]
+            new_url = "https://www.youtube.com/watch?v=" + video_ids[0]
 
-            mp3.song(url)
+            mp3.song(new_url)
             os.listdir()
 
             # get all of the .mp3 file in this directory
