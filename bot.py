@@ -99,7 +99,7 @@ async def on_message(message):
             msg = msg[1].replace(' ','+')
 
             # create a youtube serach link with our string
-            print(f'https://www.youtube.com/results?search_query={msg[1]}'')
+            print(f'https://www.youtube.com/results?search_query={msg[1]}')
             html = urllib.request.urlopen(f'https://www.youtube.com/results?search_query={msg[1]}')
             video_ids = re.findall(r'watch\?v=(\S{11})', html.read().decode())
 
