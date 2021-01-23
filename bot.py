@@ -95,13 +95,15 @@ async def on_message(message):
         elif not url:
             #split the message after the fisrt 'empty space'
             msg = msg.split(" ",1)
+            print(msg)
 
             # create a youtube serach link with our string
-            html = urllib.request.urlopen(f"https://www.youtube.com/results?search_query={msg}")
+            html = urllib.request.urlopen(f"https://www.youtube.com/results?search_query={msg[1]}")
             video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
 
             # construct a new url from the videos id's we got back
             new_url = "https://www.youtube.com/watch?v=" + video_ids[0]
+            print(new_url)
 
             mp3.song(new_url)
             os.listdir()
