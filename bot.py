@@ -97,6 +97,7 @@ async def on_message(message):
             msg = msg.split(' ',1)
             print(msg[1])
             msg = msg[1].replace(' ','+')
+            print(msg)
 
             # create a youtube serach link with our string
             print(f'https://www.youtube.com/results?search_query={msg[1]}')
