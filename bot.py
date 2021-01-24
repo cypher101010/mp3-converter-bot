@@ -129,7 +129,7 @@ async def on_message(message):
                     os.remove(files)
                     print('File was deleted...')
                 else:
-                    await channel.send(new_url)
+                    await message.channel.send(new_url)
                     await message.channel.send(file=discord.File(files))
                     print('File was sent...\n')
 
