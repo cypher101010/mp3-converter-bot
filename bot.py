@@ -100,8 +100,8 @@ async def on_message(message):
             print(msg)
 
             # create a youtube serach link with our string
-            print(f'https://www.youtube.com/results?search_query={msg[1]}')
-            html = urllib.request.urlopen(f'https://www.youtube.com/results?search_query={msg[1]}')
+            print(f'https://www.youtube.com/results?search_query={msg}')
+            html = urllib.request.urlopen(f'https://www.youtube.com/results?search_query={msg}')
             video_ids = re.findall(r'watch\?v=(\S{11})', html.read().decode())
 
             # construct a new url from the videos id's we got back
