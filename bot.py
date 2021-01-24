@@ -108,7 +108,7 @@ async def on_message(message):
             new_url = 'https://www.youtube.com/watch?v=' + video_ids[0]
             print(new_url)
 
-            mp3.song(new_url)
+            mp3.song([new_url])
             os.listdir()
 
             # get all of the .mp3 file in this directory
