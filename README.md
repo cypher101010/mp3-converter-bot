@@ -7,6 +7,7 @@ __MP3 Converter is a discord bot for convreting youtube video links in .mp3 file
 
 ## Example command:
  * -a [example youtube video link]
+ * -a [song title]
  
  
 ## How it works:
